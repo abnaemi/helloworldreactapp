@@ -4,15 +4,18 @@ import './App.css';
 import Greetings from './GreetingsMethod';
 
 function App() {
-    const name = "Test Termann";
+    const names = ["Steffen", "Levin", "Abdul"];
 
     return (
         <div className="App">
             <header className="App-header">
                 <div>
-                    <Greetings name={name} />
-                        Hello World2
-
+                    {names.map(name => (
+                        <Greetings name={name} key={name} />
+                    ))}
+                    <p>
+                        Hello World
+                    </p>
                 </div>
             </header>
         </div>
